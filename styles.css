@@ -309,7 +309,9 @@
     .sub_footer{
         width:848px;
         height: 350px;
-        margin-left:70%;
+        position: absolute;
+        left:50%;
+        transform: translate(-50%,0%);
         display: flex;
         gap:30px;
         border-bottom: 1.5px solid #c4ac9c;;
@@ -334,7 +336,8 @@
         margin-top: 400px;
         padding-bottom: 30px;
         width: 150px;
-        margin-left: 70%;
+        position: absolute;
+        left:50%;
         transform: translate(-50%,0%);
     }
 }
