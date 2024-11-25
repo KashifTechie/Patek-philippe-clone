@@ -510,6 +510,39 @@
                 </div>`
 
     })
+	let stock1 = document.querySelector('.stock1')
+    let stock2 = document.querySelector('.stock2')
+    let stock3 = document.querySelector('.stock3')
+    let stock4 = document.querySelector('.stock4')
+    let stock5 = document.querySelector('.stock5')
+    let stock6 = document.querySelector('.stock6')
+    let stock7 = document.querySelector('.stock7')
+    let stocks_ = [stock1, stock2, stock3, stock4, stock5, stock6, stock7]
+
+    document.querySelector('.stock_container').addEventListener('mouseenter', (event) => {
+        // console.log(`Hovered class: ${event.target.className}`);
+        stocks_.forEach(element => {
+            element.style.opacity = element == event.target ? 1 : 0.09
+            element.style.transition = "all 1s";
+
+        });
+    }, true);
+    document.querySelector('.stock_container').addEventListener('mouseleave', (event) => {
+        stocks_.forEach(elment => {
+            elment.style.opacity = 1
+        })
+    }, true);
+
+    // https://static.patek.com/videos/articles/5821_1AR_001/PP_5821_1AR_001_banner-desktop_185966_0.mp4
+    document.querySelector('.watch_video2').addEventListener('click',()=>{
+        document.querySelector('.video').innerHTML = `<video autoplay loop src="https://static.patek.com/videos/articles/5821_1AR_001/PP_5821_1AR_001_banner-desktop_185966_0.mp4"></video>`
+    })
+    document.querySelector('.watch_video3').addEventListener('click',()=>{
+        document.querySelector('.video').innerHTML = `<video autoplay loop src="https://static.patek.com/videos/articles/5821_1A_001/PP_5821_1A_001_banner-desktop_185964_0.mp4"></video>`
+    })
+    document.querySelector('.watch_video1').addEventListener('click',()=>{
+        document.querySelector('.video').innerHTML = `<video autoplay loop src="https://static.patek.com/videos/articles/5822P_001/PP_5822P_001_banner-desktop_185969_0.mp4"></video>`
+    })
     
 </script>
 
